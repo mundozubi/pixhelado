@@ -1,0 +1,2345 @@
+[gd_scene load_steps=89 format=3 uid="uid://8rckn8i2ixm6"]
+
+[ext_resource type="Script" path="res://paintArea/paint_area_main_script.gd" id="1_siorr"]
+[ext_resource type="Script" path="res://paintArea/scripts/nr_pixel_spawner.gd" id="3_7p5r2"]
+[ext_resource type="Texture2D" uid="uid://bc1hd2en0c1d7" path="res://sources/square.png" id="3_sigxg"]
+[ext_resource type="Script" path="res://paintArea/scripts/layers_management.gd" id="4_0l1b0"]
+[ext_resource type="Script" path="res://paintArea/scripts/border_options_manager.gd" id="4_2l22x"]
+[ext_resource type="Texture2D" uid="uid://u8ryutyujd3q" path="res://sources/interface/layer_button.png" id="4_vkm7u"]
+[ext_resource type="Texture2D" uid="uid://btagnm3o6oolm" path="res://sources/interface/color_button_border.png" id="5_2fsyr"]
+[ext_resource type="Script" path="res://paintArea/scripts/screen_shot_script.gd" id="5_maq0f"]
+[ext_resource type="Script" path="res://paintArea/scripts/save_project.gd" id="6_84ivh"]
+[ext_resource type="Texture2D" uid="uid://bn5gguh2arurb" path="res://sources/interface/color_button_inside.png" id="6_rpeg7"]
+[ext_resource type="Texture2D" uid="uid://c377tax0igpvq" path="res://sources/border/close.png" id="6_we2nm"]
+[ext_resource type="Texture2D" uid="uid://brdt3snqi06w8" path="res://sources/prot_logo_transparent.png" id="7_2x885"]
+[ext_resource type="Script" path="res://paintArea/scripts/load_project.gd" id="7_epe8i"]
+[ext_resource type="Script" path="res://paintArea/scripts/local_canvas_manager.gd" id="8_4vkmi"]
+[ext_resource type="Texture2D" uid="uid://bordnbbfa6ksm" path="res://sources/border/file_with_text.png" id="8_hk1r6"]
+[ext_resource type="Texture2D" uid="uid://be0mbr3x8fiid" path="res://sources/interface/color_button_border_pressed.png" id="8_w42t0"]
+[ext_resource type="Texture2D" uid="uid://bwptj0xaqsan3" path="res://sources/border/save_with_text.png" id="9_2c3rs"]
+[ext_resource type="Script" path="res://paintArea/scripts/canvas_generator.gd" id="9_3tjah"]
+[ext_resource type="Script" path="res://paintArea/scripts/nr_canvas_generator.gd" id="9_eq1cn"]
+[ext_resource type="Script" path="res://paintArea/r_pixel_container.gd" id="9_irrhg"]
+[ext_resource type="Texture2D" uid="uid://c2por1xn4cn5b" path="res://sources/interface/color_button_inside_pressed.png" id="9_wu5na"]
+[ext_resource type="Texture2D" uid="uid://dbs4wkrm1n263" path="res://sources/border/line.png" id="10_tyr62"]
+[ext_resource type="Script" path="res://paintArea/scripts/layers_manager.gd" id="11_oispd"]
+[ext_resource type="Script" path="res://paintArea/scripts/color_hsv_sliders.gd" id="11_omaa5"]
+[ext_resource type="Texture2D" uid="uid://s0paksm0oj7u" path="res://sources/border/box_top.png" id="11_wh21a"]
+[ext_resource type="Texture2D" uid="uid://6uagapr7dp4" path="res://sources/border/help.png" id="11_yrjyh"]
+[ext_resource type="Script" path="res://paintArea/scripts/preview_generator.gd" id="12_8tamo"]
+[ext_resource type="Texture2D" uid="uid://j7cxpcx08t4c" path="res://sources/border/box_top_inside.png" id="12_lf84u"]
+[ext_resource type="Script" path="res://paintArea/scripts/pixel_grid_generator.gd" id="14_mudw2"]
+[ext_resource type="Texture2D" uid="uid://m5j7c1cwjc3x" path="res://sources/interface/eye.png" id="15_x1qxd"]
+[ext_resource type="Texture2D" uid="uid://3cgq7q8ntcy8" path="res://sources/interface/colour_border.png" id="16_i0blx"]
+[ext_resource type="Texture2D" uid="uid://bbnyds2ml3iax" path="res://sources/interface/scolourgradient.png" id="17_nd7a1"]
+[ext_resource type="Texture2D" uid="uid://be1sys76j7xc8" path="res://sources/interface/hcolourgradient.png" id="18_pmsdb"]
+[ext_resource type="Texture2D" uid="uid://c7uelr2cvagn6" path="res://sources/interface/onion2.png" id="18_rqmyb"]
+[ext_resource type="Texture2D" uid="uid://mhmxwcxdi6t8" path="res://sources/border/box_middle.png" id="18_wpkwq"]
+[ext_resource type="Texture2D" uid="uid://cfudt81siy7kk" path="res://sources/interface/grabber.png" id="19_4sc3w"]
+[ext_resource type="Texture2D" uid="uid://bdcrx4v3cyamt" path="res://sources/border/box_middle_inside.png" id="19_4334u"]
+[ext_resource type="Texture2D" uid="uid://c7t2http70vbg" path="res://pixel/pixel.png" id="19_palh3"]
+[ext_resource type="Texture2D" uid="uid://whnpp6f0rfpr" path="res://sources/interface/colorgradientborder.png" id="20_7hnox"]
+[ext_resource type="Script" path="res://paintArea/scripts/hex_color.gd" id="21_57trd"]
+[ext_resource type="Texture2D" uid="uid://cwlfov0aq0yex" path="res://sources/border/save_image_option.png" id="21_ebi7u"]
+[ext_resource type="Texture2D" uid="uid://bb060w4dsol3h" path="res://sources/interface/vcolourgradient.png" id="22_m6sgf"]
+[ext_resource type="Texture2D" uid="uid://biriu44pjg4v4" path="res://sources/border/save_project_option.png" id="23_8dgil"]
+[ext_resource type="Texture2D" uid="uid://l404ekvma6o5" path="res://sources/interface/input.png" id="24_yr6xb"]
+[ext_resource type="Texture2D" uid="uid://bnj6xa0iae1t7" path="res://sources/border/load_project_option.png" id="25_astty"]
+[ext_resource type="FontFile" uid="uid://bp5s4xt7t4c52" path="res://sources/fonts/Bytesized-Regular.ttf" id="25_b38la"]
+[ext_resource type="Script" path="res://paintArea/scripts/tools.gd" id="25_yiy7r"]
+[ext_resource type="Texture2D" uid="uid://226nxdx1r8ny" path="res://sources/interface/colours.png" id="26_1es7g"]
+[ext_resource type="Texture2D" uid="uid://cm65yrxx4rlyx" path="res://sources/interface/tools.png" id="27_g0a4r"]
+[ext_resource type="Texture2D" uid="uid://y6xj4b6c0yaf" path="res://sources/interface/brush.png" id="29_r5vih"]
+[ext_resource type="Texture2D" uid="uid://y78g36gtpkls" path="res://sources/interface/draft.png" id="30_jdqnw"]
+[ext_resource type="Texture2D" uid="uid://3f8mcksxjpby" path="res://sources/interface/cuvette.png" id="31_fdgt3"]
+[ext_resource type="Texture2D" uid="uid://8wsucdpyqg1w" path="res://sources/interface/dropper_color_border.png" id="32_3p73t"]
+[ext_resource type="Texture2D" uid="uid://bqymcd501e0e7" path="res://sources/interface/dropper.png" id="32_yf4l5"]
+[ext_resource type="Script" path="res://paintArea/scripts/border.gd" id="33_qlyqs"]
+[ext_resource type="Texture2D" uid="uid://cbonxocetmbup" path="res://sources/interface/dropper_color_inside.png" id="33_sodo1"]
+[ext_resource type="Script" path="res://paintArea/scripts/tools_settings_window_manager.gd" id="40_ftiir"]
+[ext_resource type="Texture2D" uid="uid://djaw5vi3kqa2s" path="res://sources/interface/toolssettings.png" id="41_3ei15"]
+[ext_resource type="Texture2D" uid="uid://cksuoabli0o7g" path="res://sources/border/new_project_option.png" id="47_jx3g3"]
+[ext_resource type="Script" path="res://paintArea/scripts/windows.gd" id="49_b22c0"]
+[ext_resource type="Texture2D" uid="uid://d3eo7rly2g5tg" path="res://splash_screen.png" id="50_g7t8w"]
+[ext_resource type="Texture2D" uid="uid://7sc14majc6kq" path="res://sources/border/window_border.png" id="51_857ds"]
+[ext_resource type="Texture2D" uid="uid://dp2ue2e8lnbbc" path="res://sources/border/window_inside.png" id="52_yodqg"]
+[ext_resource type="Texture2D" uid="uid://cuj1m4wqaqsyj" path="res://sources/border/window_button_2.png" id="54_ha2xk"]
+[ext_resource type="Texture2D" uid="uid://gjckhtw7ywta" path="res://sources/interface/colours_wo.png" id="57_fvg6b"]
+[ext_resource type="Texture2D" uid="uid://dnp7b4uta8wbq" path="res://sources/interface/tsettings_wo.png" id="58_oinpx"]
+[ext_resource type="Texture2D" uid="uid://n4t0x48ujrxp" path="res://sources/border/about_option.png" id="60_kev4o"]
+[ext_resource type="Texture2D" uid="uid://bfq8awggcuwlp" path="res://sources/border/check_for_updates_option.png" id="61_4of1l"]
+[ext_resource type="Texture2D" uid="uid://80imufhc7xd1" path="res://sources/border/window_large_inside.png" id="64_j0qvc"]
+[ext_resource type="Texture2D" uid="uid://cyk2qlisaokxe" path="res://sources/border/window_large_border.png" id="65_dsgnd"]
+[ext_resource type="Texture2D" uid="uid://5sg0i074xg0b" path="res://sources/border/unselected.png" id="66_htxvd"]
+[ext_resource type="Texture2D" uid="uid://cx18sqg1i3yv0" path="res://sources/border/selected.png" id="67_qktn6"]
+[ext_resource type="Script" path="res://paintArea/scripts/updates_checker.gd" id="67_tcdbk"]
+[ext_resource type="Script" path="res://paintArea/scripts/image_saving_options.gd" id="71_v7dbi"]
+[ext_resource type="Script" path="res://paintArea/scripts/about_section_manager.gd" id="72_hm0v1"]
+[ext_resource type="Texture2D" uid="uid://nrjhwq885t02" path="res://sources/border/window_button.png" id="73_3kffm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35kur"]
+
+[sub_resource type="Animation" id="Animation_c33xt"]
+resource_name = "inactive"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("border:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_2fsyr")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("inside:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_rpeg7")]
+}
+
+[sub_resource type="Animation" id="Animation_vckbo"]
+resource_name = "pressed"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("border:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_w42t0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("inside:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_wu5na")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_18s71"]
+_data = {
+"inactive": SubResource("Animation_c33xt"),
+"pressed": SubResource("Animation_vckbo")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flaew"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvdab"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bbh4"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vht30"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qx7bj"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shqtu"]
+bg_color = Color(0.223529, 0.223529, 0.223529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cej0"]
+bg_color = Color(0.188235, 0.188235, 0.188235, 1)
+corner_detail = 1
+
+[sub_resource type="Theme" id="Theme_q6ubm"]
+default_font = ExtResource("25_b38la")
+OptionButton/constants/arrow_margin = 4
+OptionButton/constants/h_separation = 4
+OptionButton/styles/disabled = null
+OptionButton/styles/disabled_mirrored = null
+OptionButton/styles/focus = null
+OptionButton/styles/hover = SubResource("StyleBoxFlat_qvdab")
+OptionButton/styles/hover_mirrored = null
+OptionButton/styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3bbh4")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_vht30")
+OptionButton/styles/normal_mirrored = null
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_qx7bj")
+OptionButton/styles/pressed_mirrored = null
+PopupMenu/constants/indent = 6
+PopupMenu/constants/item_start_padding = 12
+PopupMenu/font_sizes/font_size = 24
+PopupMenu/fonts/font = ExtResource("25_b38la")
+PopupMenu/fonts/font_separator = ExtResource("25_b38la")
+PopupMenu/fonts/title_font = ExtResource("25_b38la")
+PopupMenu/icons/radio_checked = ExtResource("67_qktn6")
+PopupMenu/icons/radio_checked_disabled = ExtResource("66_htxvd")
+PopupMenu/icons/radio_unchecked = ExtResource("66_htxvd")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_shqtu")
+PopupMenu/styles/labeled_separator_left = null
+PopupMenu/styles/labeled_separator_right = null
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_6cej0")
+
+[node name="paintArea" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_siorr")
+
+[node name="scripts" type="Node" parent="."]
+
+[node name="_old" type="Node" parent="scripts"]
+
+[node name="NRPixelSpawner" type="Node" parent="scripts/_old"]
+script = ExtResource("3_7p5r2")
+
+[node name="LayersManagement" type="Node" parent="scripts/_old"]
+script = ExtResource("4_0l1b0")
+
+[node name="ColorSelector" type="Node" parent="scripts"]
+
+[node name="BorderOptionsManager" type="Node" parent="scripts"]
+script = ExtResource("4_2l22x")
+
+[node name="ScreenShotScript" type="Node" parent="scripts"]
+script = ExtResource("5_maq0f")
+
+[node name="SaveProject" type="Node" parent="scripts"]
+script = ExtResource("6_84ivh")
+
+[node name="LoadProject" type="Node" parent="scripts"]
+script = ExtResource("7_epe8i")
+
+[node name="LocalCanvasManager" type="Node" parent="scripts"]
+script = ExtResource("8_4vkmi")
+
+[node name="NRCanvasGenerator" type="Node" parent="scripts/LocalCanvasManager"]
+script = ExtResource("9_eq1cn")
+
+[node name="CanvasGenerator" type="Node" parent="scripts/LocalCanvasManager"]
+script = ExtResource("9_3tjah")
+
+[node name="LayersManager" type="Node" parent="scripts/LocalCanvasManager"]
+script = ExtResource("11_oispd")
+
+[node name="PreviewGenerator" type="Node" parent="scripts/LocalCanvasManager/LayersManager"]
+script = ExtResource("12_8tamo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(576, 360)
+scale = Vector2(73.1875, 45.0625)
+texture = ExtResource("3_sigxg")
+
+[node name="Canvas" type="Node2D" parent="."]
+position = Vector2(288, 88)
+scale = Vector2(0.93, 0.93)
+
+[node name="NRPixelContainer" type="Node2D" parent="Canvas"]
+
+[node name="canvas" type="Sprite2D" parent="Canvas/NRPixelContainer"]
+texture_filter = 1
+scale = Vector2(19, 19)
+centered = false
+
+[node name="RPixelContainer" type="Node2D" parent="Canvas"]
+script = ExtResource("9_irrhg")
+
+[node name="rp_layer_01" type="Node2D" parent="Canvas/RPixelContainer"]
+
+[node name="canvas" type="Sprite2D" parent="Canvas/RPixelContainer/rp_layer_01"]
+texture_filter = 1
+scale = Vector2(19, 19)
+centered = false
+
+[node name="rp_layer_02" type="Node2D" parent="Canvas/RPixelContainer"]
+
+[node name="canvas" type="Sprite2D" parent="Canvas/RPixelContainer/rp_layer_02"]
+texture_filter = 1
+scale = Vector2(19, 19)
+centered = false
+
+[node name="rp_layer_03" type="Node2D" parent="Canvas/RPixelContainer"]
+
+[node name="canvas" type="Sprite2D" parent="Canvas/RPixelContainer/rp_layer_03"]
+texture_filter = 1
+scale = Vector2(19, 19)
+centered = false
+
+[node name="rp_layer_04" type="Node2D" parent="Canvas/RPixelContainer"]
+
+[node name="canvas" type="Sprite2D" parent="Canvas/RPixelContainer/rp_layer_04"]
+texture_filter = 1
+scale = Vector2(19, 19)
+centered = false
+
+[node name="PixelGridOverlay" type="Node2D" parent="Canvas"]
+scale = Vector2(19, 19)
+script = ExtResource("14_mudw2")
+
+[node name="ssAreaContainer" type="SubViewportContainer" parent="Canvas"]
+texture_filter = 1
+offset_left = -680.0
+offset_top = -508.0
+offset_right = 1471.0
+offset_bottom = 1084.0
+
+[node name="ssArea" type="SubViewport" parent="Canvas/ssAreaContainer"]
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(608, 608)
+render_target_update_mode = 4
+
+[node name="antizoom" type="Node2D" parent="."]
+position = Vector2(576, 360)
+scale = Vector2(73.1875, 45.0625)
+
+[node name="right" type="Sprite2D" parent="antizoom"]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(5.92656, 0)
+scale = Vector2(0.26772, 1)
+texture = ExtResource("3_sigxg")
+
+[node name="down" type="Sprite2D" parent="antizoom"]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(0.0649014, 7.26219)
+scale = Vector2(0.991887, 0.0894591)
+texture = ExtResource("3_sigxg")
+
+[node name="left" type="Sprite2D" parent="antizoom"]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(-5.98975, 0.0943132)
+scale = Vector2(0.243168, 0.966019)
+texture = ExtResource("3_sigxg")
+
+[node name="top" type="Sprite2D" parent="antizoom"]
+modulate = Color(0.103744, 0.103744, 0.103744, 1)
+position = Vector2(3.50177e-07, -6.31345)
+scale = Vector2(0.991887, 0.0346741)
+texture = ExtResource("3_sigxg")
+
+[node name="ViewportBorder" type="Node2D" parent="."]
+z_index = 99
+
+[node name="LineBottom" type="Sprite2D" parent="ViewportBorder"]
+modulate = Color(1, 0.6, 0, 1)
+position = Vector2(579.436, 716)
+rotation = 1.5708
+scale = Vector2(0.59375, 72.633)
+texture = ExtResource("3_sigxg")
+
+[node name="LineRight" type="Sprite2D" parent="ViewportBorder"]
+modulate = Color(1, 0.6, 0, 1)
+position = Vector2(1158, 360)
+scale = Vector2(0.59375, 45.0625)
+texture = ExtResource("3_sigxg")
+
+[node name="LineLeft" type="Sprite2D" parent="ViewportBorder"]
+modulate = Color(1, 0.6, 0, 1)
+position = Vector2(0, 360)
+scale = Vector2(0.59375, 45.0625)
+texture = ExtResource("3_sigxg")
+
+[node name="interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="layers" type="Control" parent="interface"]
+anchors_preset = 0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 220.0
+offset_bottom = 229.0
+scale = Vector2(0.9, 0.9)
+
+[node name="layer00" type="Sprite2D" parent="interface/layers"]
+texture_filter = 1
+position = Vector2(1024, 544)
+scale = Vector2(6, 6)
+texture = ExtResource("4_vkm7u")
+
+[node name="button00" type="Button" parent="interface/layers/layer00"]
+offset_left = -19.0
+offset_top = -11.0
+offset_right = 19.0
+offset_bottom = 10.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="content" type="Node2D" parent="interface/layers/layer00"]
+
+[node name="ly_numb" type="Label" parent="interface/layers/layer00/content"]
+offset_left = -6.22222
+offset_top = -4.74074
+offset_right = 25.7778
+offset_bottom = 5.25926
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 8
+text = "LAYER 01"
+metadata/_edit_use_anchors_ = true
+
+[node name="eye" type="Sprite2D" parent="interface/layers/layer00/content"]
+position = Vector2(-12.1481, -1.77778)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("15_x1qxd")
+
+[node name="eye_button00" type="Button" parent="interface/layers/layer00/content/eye"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 6.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="layer01" type="Sprite2D" parent="interface/layers"]
+texture_filter = 1
+position = Vector2(1024, 415)
+scale = Vector2(6, 6)
+texture = ExtResource("4_vkm7u")
+
+[node name="button01" type="Button" parent="interface/layers/layer01"]
+offset_left = -19.5556
+offset_top = -11.3889
+offset_right = 18.4444
+offset_bottom = 9.61111
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="content" type="Node2D" parent="interface/layers/layer01"]
+
+[node name="eye" type="Sprite2D" parent="interface/layers/layer01/content"]
+position = Vector2(-12.1667, -1.66667)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("15_x1qxd")
+
+[node name="eye_button01" type="Button" parent="interface/layers/layer01/content/eye"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 6.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ly_numb" type="Label" parent="interface/layers/layer01/content"]
+offset_left = -5.5
+offset_top = -5.5
+offset_right = 26.5
+offset_bottom = 4.5
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 8
+text = "LAYER 02"
+metadata/_edit_use_anchors_ = true
+
+[node name="layer02" type="Sprite2D" parent="interface/layers"]
+texture_filter = 1
+position = Vector2(1024, 288)
+scale = Vector2(6, 6)
+texture = ExtResource("4_vkm7u")
+
+[node name="button02" type="Button" parent="interface/layers/layer02"]
+offset_left = -19.0
+offset_top = -11.0
+offset_right = 19.0
+offset_bottom = 10.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="content" type="Node2D" parent="interface/layers/layer02"]
+
+[node name="eye" type="Sprite2D" parent="interface/layers/layer02/content"]
+position = Vector2(-12.1667, -1.66666)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("15_x1qxd")
+
+[node name="eye_button02" type="Button" parent="interface/layers/layer02/content/eye"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 6.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ly_numb" type="Label" parent="interface/layers/layer02/content"]
+offset_left = -5.5
+offset_top = -5.5
+offset_right = 26.5
+offset_bottom = 4.5
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 8
+text = "LAYER 03"
+metadata/_edit_use_anchors_ = true
+
+[node name="layer03" type="Sprite2D" parent="interface/layers"]
+texture_filter = 1
+position = Vector2(1024, 160)
+scale = Vector2(6, 6)
+texture = ExtResource("4_vkm7u")
+
+[node name="button03" type="Button" parent="interface/layers/layer03"]
+offset_left = -19.0
+offset_top = -11.0
+offset_right = 19.0
+offset_bottom = 10.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="content" type="Node2D" parent="interface/layers/layer03"]
+
+[node name="eye" type="Sprite2D" parent="interface/layers/layer03/content"]
+position = Vector2(-12.1667, -1.66667)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("15_x1qxd")
+
+[node name="eye_button03" type="Button" parent="interface/layers/layer03/content/eye"]
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 6.0
+offset_bottom = 4.0
+focus_mode = 0
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ly_numb" type="Label" parent="interface/layers/layer03/content"]
+offset_left = -5.5
+offset_top = -5.5
+offset_right = 26.5
+offset_bottom = 4.5
+scale = Vector2(0.7, 0.7)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 8
+text = "LAYER 04"
+metadata/_edit_use_anchors_ = true
+
+[node name="onion" type="Sprite2D" parent="interface/layers"]
+position = Vector2(935, 640)
+scale = Vector2(5, 5)
+texture = ExtResource("5_2fsyr")
+
+[node name="onion_button" type="Button" parent="interface/layers/onion"]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+focus_mode = 0
+flat = true
+
+[node name="onion_icon" type="Sprite2D" parent="interface/layers/onion"]
+position = Vector2(-1.49012e-08, -0.600006)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_rqmyb")
+
+[node name="colours" type="Control" parent="interface"]
+visible = false
+anchors_preset = 0
+offset_left = -40.0
+offset_right = 32.0
+offset_bottom = 40.0
+
+[node name="def_colours" type="Node2D" parent="interface/colours"]
+visible = false
+
+[node name="border" type="Sprite2D" parent="interface/colours/def_colours"]
+position = Vector2(176, 416)
+scale = Vector2(6, 6)
+texture = ExtResource("16_i0blx")
+
+[node name="sliders" type="Node2D" parent="interface/colours"]
+position = Vector2(-56, 40)
+script = ExtResource("11_omaa5")
+
+[node name="h" type="Node2D" parent="interface/colours/sliders"]
+
+[node name="TextureRect" type="TextureRect" parent="interface/colours/sliders/h"]
+offset_left = 120.0
+offset_top = 320.0
+offset_right = 12120.0
+offset_bottom = 4220.0
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("18_pmsdb")
+
+[node name="HSlider" type="HSlider" parent="interface/colours/sliders/h"]
+offset_left = 120.0
+offset_top = 320.0
+offset_right = 360.0
+offset_bottom = 398.0
+theme_override_icons/grabber = ExtResource("19_4sc3w")
+theme_override_icons/grabber_highlight = ExtResource("19_4sc3w")
+theme_override_icons/grabber_disabled = ExtResource("19_4sc3w")
+theme_override_icons/tick = ExtResource("19_4sc3w")
+theme_override_styles/slider = SubResource("StyleBoxFlat_35kur")
+
+[node name="border" type="Sprite2D" parent="interface/colours/sliders/h"]
+position = Vector2(240, 359)
+scale = Vector2(6, 6)
+texture = ExtResource("20_7hnox")
+
+[node name="s" type="Node2D" parent="interface/colours/sliders"]
+position = Vector2(0, 96)
+
+[node name="TextureRect" type="TextureRect" parent="interface/colours/sliders/s"]
+offset_left = 120.0
+offset_top = 320.0
+offset_right = 12120.0
+offset_bottom = 4220.0
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("17_nd7a1")
+
+[node name="HSlider" type="HSlider" parent="interface/colours/sliders/s"]
+offset_left = 120.0
+offset_top = 320.0
+offset_right = 360.0
+offset_bottom = 398.0
+theme_override_icons/grabber = ExtResource("19_4sc3w")
+theme_override_icons/grabber_highlight = ExtResource("19_4sc3w")
+theme_override_icons/grabber_disabled = ExtResource("19_4sc3w")
+theme_override_icons/tick = ExtResource("19_4sc3w")
+theme_override_styles/slider = SubResource("StyleBoxFlat_35kur")
+value = 100.0
+
+[node name="border" type="Sprite2D" parent="interface/colours/sliders/s"]
+position = Vector2(240, 359)
+scale = Vector2(6, 6)
+texture = ExtResource("20_7hnox")
+
+[node name="v" type="Node2D" parent="interface/colours/sliders"]
+position = Vector2(0, 192)
+
+[node name="TextureRect" type="TextureRect" parent="interface/colours/sliders/v"]
+offset_left = 120.0
+offset_top = 320.0
+offset_right = 12120.0
+offset_bottom = 4220.0
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("22_m6sgf")
+
+[node name="HSlider" type="HSlider" parent="interface/colours/sliders/v"]
+offset_left = 120.0
+offset_top = 320.0
+offset_right = 360.0
+offset_bottom = 398.0
+theme_override_icons/grabber = ExtResource("19_4sc3w")
+theme_override_icons/grabber_highlight = ExtResource("19_4sc3w")
+theme_override_icons/grabber_disabled = ExtResource("19_4sc3w")
+theme_override_icons/tick = ExtResource("19_4sc3w")
+theme_override_styles/slider = SubResource("StyleBoxFlat_35kur")
+value = 100.0
+
+[node name="border" type="Sprite2D" parent="interface/colours/sliders/v"]
+position = Vector2(240, 359)
+scale = Vector2(6, 6)
+texture = ExtResource("20_7hnox")
+
+[node name="hsvcolor" type="Node2D" parent="interface/colours/sliders"]
+position = Vector2(152, 272)
+
+[node name="border" type="Sprite2D" parent="interface/colours/sliders/hsvcolor"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("5_2fsyr")
+
+[node name="inside" type="Sprite2D" parent="interface/colours/sliders/hsvcolor"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("6_rpeg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interface/colours/sliders/hsvcolor"]
+libraries = {
+"": SubResource("AnimationLibrary_18s71")
+}
+
+[node name="hsvcolor_button" type="Button" parent="interface/colours/sliders/hsvcolor"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+flat = true
+
+[node name="hex_color" type="Node2D" parent="interface/colours"]
+texture_filter = 1
+position = Vector2(48, 136)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("21_57trd")
+
+[node name="input_spr" type="Sprite2D" parent="interface/colours/hex_color"]
+position = Vector2(224, 672)
+scale = Vector2(6, 6)
+texture = ExtResource("24_yr6xb")
+
+[node name="input" type="LineEdit" parent="interface/colours/hex_color"]
+texture_filter = 1
+offset_left = 128.0
+offset_top = 640.0
+offset_right = 320.0
+offset_bottom = 704.0
+focus_mode = 1
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.372549)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxFlat_flaew")
+placeholder_text = "#HEX"
+max_length = 7
+deselect_on_focus_loss_enabled = false
+flat = true
+
+[node name="hexcolor" type="Node2D" parent="interface/colours/hex_color"]
+position = Vector2(50, 670)
+
+[node name="border" type="Sprite2D" parent="interface/colours/hex_color/hexcolor"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("5_2fsyr")
+
+[node name="inside" type="Sprite2D" parent="interface/colours/hex_color/hexcolor"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("6_rpeg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interface/colours/hex_color/hexcolor"]
+libraries = {
+"": SubResource("AnimationLibrary_18s71")
+}
+
+[node name="hexcolor_button" type="Button" parent="interface/colours/hex_color/hexcolor"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+flat = true
+
+[node name="colours" type="Sprite2D" parent="interface/colours"]
+position = Vector2(212, 320)
+scale = Vector2(5, 5)
+texture = ExtResource("26_1es7g")
+
+[node name="tools" type="Control" parent="interface"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("25_yiy7r")
+
+[node name="tools" type="Sprite2D" parent="interface/tools"]
+position = Vector2(72, 104)
+scale = Vector2(5, 5)
+texture = ExtResource("27_g0a4r")
+
+[node name="tool01" type="Node2D" parent="interface/tools"]
+position = Vector2(56, 160)
+
+[node name="border" type="Sprite2D" parent="interface/tools/tool01"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("5_2fsyr")
+
+[node name="inside" type="Sprite2D" parent="interface/tools/tool01"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("6_rpeg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interface/tools/tool01"]
+libraries = {
+"": SubResource("AnimationLibrary_18s71")
+}
+
+[node name="tool01_button" type="Button" parent="interface/tools/tool01"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+flat = true
+
+[node name="icon" type="Sprite2D" parent="interface/tools/tool01"]
+position = Vector2(0, -2)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("29_r5vih")
+
+[node name="tool02" type="Node2D" parent="interface/tools"]
+position = Vector2(128, 160)
+
+[node name="border" type="Sprite2D" parent="interface/tools/tool02"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("5_2fsyr")
+
+[node name="inside" type="Sprite2D" parent="interface/tools/tool02"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("6_rpeg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interface/tools/tool02"]
+libraries = {
+"": SubResource("AnimationLibrary_18s71")
+}
+
+[node name="tool02_button" type="Button" parent="interface/tools/tool02"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+flat = true
+
+[node name="icon" type="Sprite2D" parent="interface/tools/tool02"]
+position = Vector2(0, -2)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("30_jdqnw")
+
+[node name="tool03" type="Node2D" parent="interface/tools"]
+position = Vector2(200, 160)
+
+[node name="border" type="Sprite2D" parent="interface/tools/tool03"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("5_2fsyr")
+
+[node name="inside" type="Sprite2D" parent="interface/tools/tool03"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("6_rpeg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interface/tools/tool03"]
+libraries = {
+"": SubResource("AnimationLibrary_18s71")
+}
+
+[node name="tool03_button" type="Button" parent="interface/tools/tool03"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+flat = true
+
+[node name="icon" type="Sprite2D" parent="interface/tools/tool03"]
+position = Vector2(0, -2)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("31_fdgt3")
+
+[node name="tool04" type="Node2D" parent="interface/tools"]
+position = Vector2(56, 232)
+
+[node name="border" type="Sprite2D" parent="interface/tools/tool04"]
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("5_2fsyr")
+
+[node name="inside" type="Sprite2D" parent="interface/tools/tool04"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+scale = Vector2(6, 6)
+texture = ExtResource("6_rpeg7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="interface/tools/tool04"]
+libraries = {
+"": SubResource("AnimationLibrary_18s71")
+}
+
+[node name="tool04_button" type="Button" parent="interface/tools/tool04"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+focus_mode = 0
+flat = true
+
+[node name="icon" type="Sprite2D" parent="interface/tools/tool04"]
+position = Vector2(0, -2)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("32_yf4l5")
+
+[node name="color" type="Node2D" parent="interface/tools/tool04"]
+
+[node name="border" type="Sprite2D" parent="interface/tools/tool04/color"]
+texture_filter = 1
+position = Vector2(-24, 16)
+scale = Vector2(6, 6)
+texture = ExtResource("32_3p73t")
+
+[node name="inside" type="Sprite2D" parent="interface/tools/tool04/color"]
+texture_filter = 1
+position = Vector2(-24, 16)
+scale = Vector2(6, 6)
+texture = ExtResource("33_sodo1")
+
+[node name="tools_settings" type="Control" parent="interface"]
+anchors_preset = 0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 32.0
+script = ExtResource("40_ftiir")
+metadata/_edit_group_ = true
+
+[node name="brush_size" type="Node2D" parent="interface/tools_settings"]
+position = Vector2(-8, 32)
+
+[node name="bs_title" type="Label" parent="interface/tools_settings/brush_size"]
+offset_left = 24.0
+offset_top = 296.0
+offset_right = 264.0
+offset_bottom = 356.0
+theme_override_colors/font_color = Color(0.783523, 0.783523, 0.783523, 1)
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "BRUSH SIZE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="px_text" type="Label" parent="interface/tools_settings/brush_size"]
+offset_left = 40.0
+offset_top = 344.0
+offset_right = 232.0
+offset_bottom = 404.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+text = "PX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="input_bg" type="Sprite2D" parent="interface/tools_settings/brush_size"]
+position = Vector2(72, 368)
+scale = Vector2(4.3125, 2.5)
+texture = ExtResource("3_sigxg")
+
+[node name="input" type="LineEdit" parent="interface/tools_settings/brush_size"]
+texture_filter = 1
+offset_left = 40.0
+offset_top = 336.0
+offset_right = 144.0
+offset_bottom = 404.0
+focus_mode = 1
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.372549)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxFlat_flaew")
+placeholder_text = "1"
+max_length = 1
+deselect_on_focus_loss_enabled = false
+flat = true
+
+[node name="toolssettings" type="Sprite2D" parent="interface/tools_settings"]
+position = Vector2(136, 320)
+scale = Vector2(5, 5)
+texture = ExtResource("41_3ei15")
+
+[node name="layer_previews" type="Control" parent="interface"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="prev_00" type="Control" parent="interface/layer_previews"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1080.0
+offset_top = 488.0
+offset_right = 1092.0
+offset_bottom = 500.0
+scale = Vector2(5, 5)
+
+[node name="layer00_prev_bg" type="TextureRect" parent="interface/layer_previews/prev_00"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("19_palh3")
+stretch_mode = 6
+
+[node name="layer00_prev" type="TextureRect" parent="interface/layer_previews/prev_00"]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 12.0
+stretch_mode = 6
+
+[node name="prev_01" type="Control" parent="interface/layer_previews"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1080.0
+offset_top = 376.0
+offset_right = 1092.0
+offset_bottom = 388.0
+scale = Vector2(5, 5)
+
+[node name="layer01_prev_bg" type="TextureRect" parent="interface/layer_previews/prev_01"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("19_palh3")
+stretch_mode = 6
+
+[node name="layer01_prev" type="TextureRect" parent="interface/layer_previews/prev_01"]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 12.0
+stretch_mode = 6
+
+[node name="prev_02" type="Control" parent="interface/layer_previews"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1080.0
+offset_top = 264.0
+offset_right = 1092.0
+offset_bottom = 276.0
+scale = Vector2(5, 5)
+
+[node name="layer02_prev_bg" type="TextureRect" parent="interface/layer_previews/prev_02"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("19_palh3")
+stretch_mode = 6
+
+[node name="layer02_prev" type="TextureRect" parent="interface/layer_previews/prev_02"]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 12.0
+stretch_mode = 6
+
+[node name="prev_03" type="Control" parent="interface/layer_previews"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1080.0
+offset_top = 144.0
+offset_right = 1092.0
+offset_bottom = 156.0
+scale = Vector2(5, 5)
+
+[node name="layer03_prev_bg" type="TextureRect" parent="interface/layer_previews/prev_03"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("19_palh3")
+stretch_mode = 6
+
+[node name="layer03_prev" type="TextureRect" parent="interface/layer_previews/prev_03"]
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 12.0
+stretch_mode = 6
+
+[node name="border" type="PanelContainer" parent="."]
+z_index = 99
+offset_right = 1160.0
+offset_bottom = 63.0
+script = ExtResource("33_qlyqs")
+
+[node name="bg" type="Sprite2D" parent="border"]
+modulate = Color(1, 0.6, 0, 1)
+position = Vector2(583, 32)
+scale = Vector2(72.875, 3.9375)
+texture = ExtResource("3_sigxg")
+
+[node name="close" type="Sprite2D" parent="border"]
+texture_filter = 1
+position = Vector2(1128, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("6_we2nm")
+
+[node name="close" type="Button" parent="border/close"]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+focus_mode = 0
+flat = true
+
+[node name="logo" type="Sprite2D" parent="border"]
+texture_filter = 1
+position = Vector2(576, 32)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("7_2x885")
+
+[node name="options" type="Node2D" parent="border"]
+
+[node name="line" type="Sprite2D" parent="border/options"]
+texture_filter = 1
+position = Vector2(288, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("10_tyr62")
+
+[node name="File" type="Node2D" parent="border/options"]
+
+[node name="file" type="Sprite2D" parent="border/options/File"]
+texture_filter = 1
+position = Vector2(64, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("8_hk1r6")
+
+[node name="file_button" type="Button" parent="border/options/File/file"]
+offset_left = -14.0
+offset_top = -6.0
+offset_right = 16.0
+offset_bottom = 8.0
+focus_mode = 0
+flat = true
+
+[node name="Box" type="Node2D" parent="border/options/File"]
+visible = false
+position = Vector2(0, 17)
+
+[node name="box" type="Sprite2D" parent="border/options/File/Box"]
+
+[node name="Top" type="Node2D" parent="border/options/File/Box"]
+
+[node name="border" type="Sprite2D" parent="border/options/File/Box/Top"]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("11_wh21a")
+
+[node name="inside" type="Sprite2D" parent="border/options/File/Box/Top" groups=["BorderBoxesInside"]]
+modulate = Color(0.25, 0.25, 0.25, 1)
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("12_lf84u")
+
+[node name="Middle" type="Node2D" parent="border/options/File/Box"]
+position = Vector2(0, -29)
+scale = Vector2(1, 2.9)
+
+[node name="border" type="Sprite2D" parent="border/options/File/Box/Middle"]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("18_wpkwq")
+
+[node name="inside" type="Sprite2D" parent="border/options/File/Box/Middle" groups=["BorderBoxesInside"]]
+modulate = Color(0.25098, 0.25098, 0.25098, 1)
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("19_4334u")
+
+[node name="Bottom" type="Node2D" parent="border/options/File/Box"]
+position = Vector2(0, 183)
+
+[node name="border" type="Sprite2D" parent="border/options/File/Box/Bottom"]
+position = Vector2(160, 64)
+rotation = 3.14159
+scale = Vector2(6, 6)
+texture = ExtResource("11_wh21a")
+
+[node name="inside" type="Sprite2D" parent="border/options/File/Box/Bottom" groups=["BorderBoxesInside"]]
+modulate = Color(0.25098, 0.25098, 0.25098, 1)
+position = Vector2(160, 64)
+rotation = 3.14159
+scale = Vector2(6, 6)
+texture = ExtResource("12_lf84u")
+
+[node name="Options" type="Node2D" parent="border/options/File/Box"]
+
+[node name="SaveImage" type="Node2D" parent="border/options/File/Box/Options"]
+
+[node name="save_image" type="Sprite2D" parent="border/options/File/Box/Options/SaveImage"]
+position = Vector2(156, 105)
+scale = Vector2(4, 4)
+texture = ExtResource("21_ebi7u")
+
+[node name="save_image_button" type="Button" parent="border/options/File/Box/Options/SaveImage"]
+offset_left = 24.0
+offset_top = 79.0
+offset_right = 296.0
+offset_bottom = 135.0
+focus_mode = 0
+flat = true
+
+[node name="LoadProject" type="Node2D" parent="border/options/File/Box/Options"]
+position = Vector2(0, 55)
+
+[node name="load_project" type="Sprite2D" parent="border/options/File/Box/Options/LoadProject"]
+position = Vector2(156, 105)
+scale = Vector2(4, 4)
+texture = ExtResource("25_astty")
+
+[node name="load_project_button" type="Button" parent="border/options/File/Box/Options/LoadProject"]
+offset_left = 24.0
+offset_top = 79.0
+offset_right = 296.0
+offset_bottom = 128.0
+focus_mode = 0
+flat = true
+
+[node name="NewProject" type="Node2D" parent="border/options/File/Box/Options"]
+position = Vector2(0, 111)
+
+[node name="new_project" type="Sprite2D" parent="border/options/File/Box/Options/NewProject"]
+position = Vector2(156, 105)
+scale = Vector2(4, 4)
+texture = ExtResource("47_jx3g3")
+
+[node name="new_project_button" type="Button" parent="border/options/File/Box/Options/NewProject"]
+offset_left = 24.0
+offset_top = 79.0
+offset_right = 296.0
+offset_bottom = 128.0
+focus_mode = 0
+flat = true
+
+[node name="Save" type="Node2D" parent="border/options"]
+
+[node name="save" type="Sprite2D" parent="border/options/Save"]
+texture_filter = 1
+position = Vector2(208, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("9_2c3rs")
+
+[node name="save_button" type="Button" parent="border/options/Save/save"]
+offset_left = -18.0
+offset_top = -6.0
+offset_right = 18.0
+offset_bottom = 8.0
+focus_mode = 0
+flat = true
+
+[node name="Box" type="Node2D" parent="border/options/Save"]
+visible = false
+position = Vector2(144, 17)
+
+[node name="box" type="Sprite2D" parent="border/options/Save/Box"]
+
+[node name="Top" type="Node2D" parent="border/options/Save/Box"]
+
+[node name="border" type="Sprite2D" parent="border/options/Save/Box/Top"]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("11_wh21a")
+
+[node name="inside" type="Sprite2D" parent="border/options/Save/Box/Top" groups=["BorderBoxesInside"]]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("12_lf84u")
+
+[node name="Middle" type="Node2D" parent="border/options/Save/Box"]
+position = Vector2(0, 42)
+
+[node name="border" type="Sprite2D" parent="border/options/Save/Box/Middle"]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("18_wpkwq")
+
+[node name="inside" type="Sprite2D" parent="border/options/Save/Box/Middle" groups=["BorderBoxesInside"]]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("19_4334u")
+
+[node name="Bottom" type="Node2D" parent="border/options/Save/Box"]
+position = Vector2(0, 84)
+
+[node name="border" type="Sprite2D" parent="border/options/Save/Box/Bottom"]
+position = Vector2(160, 64)
+rotation = 3.14159
+scale = Vector2(6, 6)
+texture = ExtResource("11_wh21a")
+
+[node name="inside" type="Sprite2D" parent="border/options/Save/Box/Bottom" groups=["BorderBoxesInside"]]
+position = Vector2(160, 64)
+rotation = 3.14159
+scale = Vector2(6, 6)
+texture = ExtResource("12_lf84u")
+
+[node name="Options" type="Node2D" parent="border/options/Save/Box"]
+
+[node name="SaveProject" type="Node2D" parent="border/options/Save/Box/Options"]
+
+[node name="save_project" type="Sprite2D" parent="border/options/Save/Box/Options/SaveProject"]
+position = Vector2(160, 103)
+scale = Vector2(4, 4)
+texture = ExtResource("23_8dgil")
+
+[node name="save_project_button" type="Button" parent="border/options/Save/Box/Options/SaveProject"]
+offset_left = 24.0
+offset_top = 79.0
+offset_right = 296.0
+offset_bottom = 143.0
+focus_mode = 0
+flat = true
+
+[node name="Help" type="Node2D" parent="border/options"]
+
+[node name="help" type="Sprite2D" parent="border/options/Help"]
+texture_filter = 1
+position = Vector2(336, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("11_yrjyh")
+
+[node name="help_button" type="Button" parent="border/options/Help/help"]
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 16.0
+offset_bottom = 8.0
+focus_mode = 0
+flat = true
+
+[node name="Box" type="Node2D" parent="border/options/Help"]
+visible = false
+position = Vector2(264, 17)
+
+[node name="box" type="Sprite2D" parent="border/options/Help/Box"]
+
+[node name="Top" type="Node2D" parent="border/options/Help/Box"]
+
+[node name="border" type="Sprite2D" parent="border/options/Help/Box/Top"]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("11_wh21a")
+
+[node name="inside" type="Sprite2D" parent="border/options/Help/Box/Top" groups=["BorderBoxesInside"]]
+modulate = Color(0.33, 0.33, 0.33, 1)
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("12_lf84u")
+
+[node name="Middle" type="Node2D" parent="border/options/Help/Box"]
+position = Vector2(0, -6)
+scale = Vector2(1, 2.2)
+
+[node name="border" type="Sprite2D" parent="border/options/Help/Box/Middle"]
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("18_wpkwq")
+
+[node name="inside" type="Sprite2D" parent="border/options/Help/Box/Middle" groups=["BorderBoxesInside"]]
+modulate = Color(0.37, 0.37, 0.37, 1)
+position = Vector2(160, 64)
+scale = Vector2(6, 6)
+texture = ExtResource("19_4334u")
+
+[node name="Bottom" type="Node2D" parent="border/options/Help/Box"]
+position = Vector2(0, 144)
+
+[node name="border" type="Sprite2D" parent="border/options/Help/Box/Bottom"]
+position = Vector2(160, 64)
+rotation = 3.14159
+scale = Vector2(6, 6)
+texture = ExtResource("11_wh21a")
+
+[node name="inside" type="Sprite2D" parent="border/options/Help/Box/Bottom" groups=["BorderBoxesInside"]]
+modulate = Color(0.34, 0.34, 0.34, 1)
+position = Vector2(160, 64)
+rotation = 3.14159
+scale = Vector2(6, 6)
+texture = ExtResource("12_lf84u")
+
+[node name="Options" type="Node2D" parent="border/options/Help/Box"]
+
+[node name="About" type="Node2D" parent="border/options/Help/Box/Options"]
+
+[node name="about_pixhelado" type="Sprite2D" parent="border/options/Help/Box/Options/About"]
+position = Vector2(160, 103)
+scale = Vector2(4, 4)
+texture = ExtResource("60_kev4o")
+
+[node name="about" type="Button" parent="border/options/Help/Box/Options/About"]
+offset_left = 24.0
+offset_top = 79.0
+offset_right = 296.0
+offset_bottom = 128.0
+focus_mode = 0
+flat = true
+
+[node name="CheckUpdates" type="Node2D" parent="border/options/Help/Box/Options"]
+position = Vector2(0, 56)
+
+[node name="check_for_updates" type="Sprite2D" parent="border/options/Help/Box/Options/CheckUpdates"]
+position = Vector2(182, 103)
+scale = Vector2(4, 4)
+texture = ExtResource("61_4of1l")
+
+[node name="check_updates" type="Button" parent="border/options/Help/Box/Options/CheckUpdates"]
+offset_left = 24.0
+offset_top = 72.0
+offset_right = 296.0
+offset_bottom = 128.0
+focus_mode = 0
+flat = true
+
+[node name="windows_options" type="Node2D" parent="border"]
+position = Vector2(712, 1)
+
+[node name="colours" type="Button" parent="border/windows_options"]
+offset_top = -1.0
+offset_right = 80.0
+offset_bottom = 62.0
+focus_mode = 0
+flat = true
+
+[node name="bg" type="Sprite2D" parent="border/windows_options/colours"]
+modulate = Color(0, 0, 0, 0.372549)
+position = Vector2(40.25, 31.8)
+scale = Vector2(5.03125, 3.975)
+texture = ExtResource("3_sigxg")
+
+[node name="icon" type="Sprite2D" parent="border/windows_options/colours"]
+position = Vector2(40, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("57_fvg6b")
+
+[node name="settings" type="Button" parent="border/windows_options"]
+offset_left = 88.0
+offset_top = -1.0
+offset_right = 168.0
+offset_bottom = 62.0
+focus_mode = 0
+flat = true
+
+[node name="bg" type="Sprite2D" parent="border/windows_options/settings"]
+modulate = Color(0, 0, 0, 0.372549)
+position = Vector2(40.25, 31.8)
+scale = Vector2(5.03125, 3.975)
+texture = ExtResource("3_sigxg")
+
+[node name="icon" type="Sprite2D" parent="border/windows_options/settings"]
+position = Vector2(40, 32)
+scale = Vector2(4, 4)
+texture = ExtResource("58_oinpx")
+
+[node name="SaveImage" type="FileDialog" parent="."]
+title = "Save Image"
+size = Vector2i(800, 500)
+ok_button_text = "Save"
+access = 2
+filters = PackedStringArray("*.png", "*.jpg", "*.webp")
+use_native_dialog = true
+
+[node name="SaveProject" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Save Project (*.pxhelado)"
+size = Vector2i(800, 500)
+ok_button_text = "Save"
+access = 2
+filters = PackedStringArray("*.pxhelado")
+use_native_dialog = true
+
+[node name="LoadProject" type="FileDialog" parent="."]
+auto_translate_mode = 1
+title = "Open a File"
+size = Vector2i(800, 500)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.pxhelado")
+use_native_dialog = true
+
+[node name="VersionDetails" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.521569)
+z_index = 199
+
+[node name="version" type="Label" parent="VersionDetails"]
+offset_left = 972.0
+offset_top = 677.0
+offset_right = 1148.0
+offset_bottom = 707.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 24
+text = "BETA 0.3.0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="copy" type="Label" parent="VersionDetails"]
+visible = false
+offset_left = 896.0
+offset_top = 688.0
+offset_right = 1144.0
+offset_bottom = 708.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 16
+text = "(c) 2025 Mundozubi.com"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="splash" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(579, 358)
+texture = ExtResource("50_g7t8w")
+
+[node name="loading_time" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="about" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = 192.0
+offset_right = 1168.0
+offset_bottom = 712.0
+script = ExtResource("72_hm0v1")
+
+[node name="bg" type="Sprite2D" parent="about"]
+modulate = Color(0.129412, 0.129412, 0.129412, 1)
+position = Vector2(584, 208)
+scale = Vector2(73, 44)
+texture = ExtResource("19_palh3")
+
+[node name="content" type="Node2D" parent="about"]
+position = Vector2(8, -192)
+
+[node name="exit_button" type="Sprite2D" parent="about/content"]
+position = Vector2(192, 632)
+scale = Vector2(5, 5)
+texture = ExtResource("73_3kffm")
+
+[node name="exit" type="Button" parent="about/content/exit_button"]
+offset_left = -32.0
+offset_top = -11.0
+offset_right = 32.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="about/content/exit_button"]
+offset_left = -27.0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 8
+text = "BACK TO THE 
+EDITOR"
+
+[node name="contact" type="Label" parent="about/content"]
+offset_left = 96.0
+offset_top = 512.0
+offset_right = 1059.0
+offset_bottom = 572.0
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+text = "MUNDOZUBI@GMAIL.COM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="email_link" type="Button" parent="about/content/contact"]
+layout_mode = 0
+offset_left = 232.0
+offset_right = 720.0
+offset_bottom = 56.0
+focus_mode = 0
+flat = true
+
+[node name="short_description" type="Label" parent="about/content"]
+modulate = Color(0.84, 0.84, 0.84, 1)
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 1059.0
+offset_bottom = 512.0
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "PixHelado is a free, open-source pixel art editor. The app is not yet complete, and we are still working on it.
+
+The app may still contain bugs, so we would love to hear your feedback to help us improve PixHelado."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="title" type="Label" parent="about/content"]
+offset_left = -27.0
+offset_top = 80.0
+offset_right = 1160.0
+offset_bottom = 200.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 96
+text = "ABOUT PIXHELADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="updates" type="Label" parent="about/content"]
+modulate = Color(0.84, 0.84, 0.84, 1)
+offset_left = 392.0
+offset_top = 592.0
+offset_right = 779.0
+offset_bottom = 682.0
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "MORE INFO IN MUNDOZUBI.COM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="mundozubi_link" type="Button" parent="about/content/updates"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 336.0
+offset_bottom = 80.0
+focus_mode = 0
+flat = true
+
+[node name="new_update_alert" type="Node2D" parent="about"]
+visible = false
+position = Vector2(0, -83)
+
+[node name="bg" type="Sprite2D" parent="about/new_update_alert"]
+modulate = Color(1, 0.6, 0, 1)
+position = Vector2(1000, 506)
+scale = Vector2(21, 12.25)
+texture = ExtResource("3_sigxg")
+
+[node name="title" type="Label" parent="about/new_update_alert"]
+modulate = Color(0.84, 0.84, 0.84, 1)
+offset_left = 848.0
+offset_top = 400.0
+offset_right = 1208.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(0.129412, 0.129412, 0.129412, 1)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "NEW UPDATE AVAILABLE!"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="version" type="Label" parent="about/new_update_alert"]
+modulate = Color(0.84, 0.84, 0.84, 1)
+offset_left = 848.0
+offset_top = 400.0
+offset_right = 1208.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0.13, 0.13, 0.13, 0.843137)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "v0.0.0"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="update_button" type="Button" parent="about/new_update_alert"]
+offset_left = 848.0
+offset_top = 528.0
+offset_right = 1152.0
+offset_bottom = 592.0
+focus_mode = 0
+flat = true
+
+[node name="update_button_bg" type="Sprite2D" parent="about/new_update_alert"]
+position = Vector2(1000, 560)
+scale = Vector2(19, 4)
+texture = ExtResource("3_sigxg")
+
+[node name="update_button_text" type="Label" parent="about/new_update_alert"]
+modulate = Color(0.84, 0.84, 0.84, 1)
+offset_left = 856.0
+offset_top = 536.0
+offset_right = 1144.0
+offset_bottom = 586.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -10
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "UPDATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HTTPRequest" type="HTTPRequest" parent="about"]
+
+[node name="check_updates" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("67_tcdbk")
+
+[node name="bg" type="Sprite2D" parent="check_updates"]
+modulate = Color(0.129412, 0.129412, 0.129412, 1)
+position = Vector2(576, 368)
+scale = Vector2(73, 45.5)
+texture = ExtResource("19_palh3")
+
+[node name="content" type="Node2D" parent="check_updates"]
+
+[node name="exit_button" type="Sprite2D" parent="check_updates/content"]
+position = Vector2(192, 632)
+scale = Vector2(5, 5)
+texture = ExtResource("73_3kffm")
+
+[node name="exit" type="Button" parent="check_updates/content/exit_button"]
+offset_left = -32.0
+offset_top = -11.0
+offset_right = 32.0
+offset_bottom = 11.0
+focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="check_updates/content/exit_button"]
+offset_left = -27.0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 8
+text = "BACK TO THE 
+EDITOR"
+
+[node name="title" type="Label" parent="check_updates/content"]
+offset_left = -16.0
+offset_top = 280.0
+offset_right = 1171.0
+offset_bottom = 400.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+text = "Checking for updates..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="new_update_alert" type="Node2D" parent="check_updates/content"]
+
+[node name="border" type="Sprite2D" parent="check_updates/content/new_update_alert"]
+position = Vector2(576, 336)
+scale = Vector2(6, 6)
+texture = ExtResource("65_dsgnd")
+
+[node name="title" type="Label" parent="check_updates/content/new_update_alert"]
+offset_left = 264.0
+offset_top = 96.0
+offset_right = 888.0
+offset_bottom = 216.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+text = "NEW UPDATE AVAILABLE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="version" type="Label" parent="check_updates/content/new_update_alert"]
+offset_left = 264.0
+offset_top = 136.0
+offset_right = 888.0
+offset_bottom = 256.0
+theme_override_constants/line_spacing = -5
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+text = "0.0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="version_cover" type="Sprite2D" parent="check_updates/content/new_update_alert"]
+position = Vector2(444, 366)
+
+[node name="download" type="Node2D" parent="check_updates/content/new_update_alert"]
+position = Vector2(752, 448)
+
+[node name="button" type="Sprite2D" parent="check_updates/content/new_update_alert/download"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="download" type="Button" parent="check_updates/content/new_update_alert/download"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="check_updates/content/new_update_alert/download"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "DOWNLOAD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="current_version" type="Node2D" parent="check_updates/content/new_update_alert"]
+position = Vector2(680, 264)
+
+[node name="text" type="Label" parent="check_updates/content/new_update_alert/current_version"]
+offset_left = -48.0
+offset_right = 192.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 24
+text = "And your current version is:"
+autowrap_mode = 3
+
+[node name="current_version" type="Label" parent="check_updates/content/new_update_alert/current_version"]
+offset_left = -48.0
+offset_top = 56.0
+offset_right = 192.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 48
+text = "0.0.0"
+autowrap_mode = 3
+
+[node name="HTTPRequest" type="HTTPRequest" parent="check_updates"]
+
+[node name="HTTPRequestImage" type="HTTPRequest" parent="check_updates"]
+
+[node name="windows" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1160.0
+offset_bottom = 720.0
+size_flags_horizontal = 4
+script = ExtResource("49_b22c0")
+
+[node name="ImageSavingOptions" type="Control" parent="windows"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("71_v7dbi")
+
+[node name="inside" type="Sprite2D" parent="windows/ImageSavingOptions"]
+modulate = Color(0.270222, 0.270222, 0.270222, 1)
+scale = Vector2(6, 6)
+texture = ExtResource("64_j0qvc")
+
+[node name="border" type="Sprite2D" parent="windows/ImageSavingOptions"]
+scale = Vector2(6, 6)
+texture = ExtResource("65_dsgnd")
+
+[node name="title" type="Label" parent="windows/ImageSavingOptions"]
+layout_mode = 0
+offset_left = -304.0
+offset_top = -203.0
+offset_right = 304.0
+offset_bottom = -153.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "SAVE IMAGE"
+horizontal_alignment = 1
+
+[node name="Button01" type="Node2D" parent="windows/ImageSavingOptions"]
+position = Vector2(-184, 148)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/ImageSavingOptions/Button01"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="accept_imgsav" type="Button" parent="windows/ImageSavingOptions/Button01"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/ImageSavingOptions/Button01"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -15
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "SAVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button03" type="Node2D" parent="windows/ImageSavingOptions"]
+position = Vector2(208, 148)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/ImageSavingOptions/Button03"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="cancel_imgsav" type="Button" parent="windows/ImageSavingOptions/Button03"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/ImageSavingOptions/Button03"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "CANCEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExportType" type="Node2D" parent="windows/ImageSavingOptions"]
+
+[node name="text" type="Label" parent="windows/ImageSavingOptions/ExportType"]
+offset_left = -288.0
+offset_top = -156.0
+offset_right = 152.0
+offset_bottom = -92.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "Export format:"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="OptionButton" type="OptionButton" parent="windows/ImageSavingOptions/ExportType"]
+offset_left = -288.0
+offset_top = -108.0
+offset_right = 188.0
+offset_bottom = -70.0
+focus_mode = 0
+theme = SubResource("Theme_q6ubm")
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "Export visible layer only"
+popup/item_1/text = "Export all layers into a single image"
+popup/item_1/id = 1
+popup/item_2/text = "Export layers as sprites"
+popup/item_2/id = 2
+
+[node name="ImageFormat" type="Node2D" parent="windows/ImageSavingOptions"]
+visible = false
+position = Vector2(0, 76)
+
+[node name="text" type="Label" parent="windows/ImageSavingOptions/ImageFormat"]
+offset_left = -288.0
+offset_top = -156.0
+offset_right = 152.0
+offset_bottom = -92.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "Image format:"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="OptionButton" type="OptionButton" parent="windows/ImageSavingOptions/ImageFormat"]
+offset_left = -288.0
+offset_top = -108.0
+offset_right = -152.0
+offset_bottom = -70.0
+focus_mode = 0
+theme = SubResource("Theme_q6ubm")
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 24
+selected = 0
+item_count = 3
+popup/item_0/text = "PNG Image"
+popup/item_1/text = "JPG Image"
+popup/item_1/id = 1
+popup/item_2/text = "WEBP Image"
+popup/item_2/id = 2
+
+[node name="RecallMyChoice" type="Node2D" parent="windows/ImageSavingOptions"]
+position = Vector2(0, 180)
+
+[node name="text" type="Label" parent="windows/ImageSavingOptions/RecallMyChoice"]
+offset_left = -288.0
+offset_top = -160.0
+offset_right = 152.0
+offset_bottom = -96.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "RECALL MY CHOICE"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="recall" type="Button" parent="windows/ImageSavingOptions/RecallMyChoice"]
+offset_left = -24.0
+offset_top = -152.0
+offset_right = 24.0
+offset_bottom = -104.0
+focus_mode = 0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="windows/ImageSavingOptions/RecallMyChoice/recall"]
+position = Vector2(24, 24)
+scale = Vector2(5, 5)
+texture = ExtResource("5_2fsyr")
+
+[node name="active" type="Sprite2D" parent="windows/ImageSavingOptions/RecallMyChoice/recall"]
+position = Vector2(24, 24)
+scale = Vector2(5, 5)
+texture = ExtResource("6_rpeg7")
+
+[node name="ExitWithoutSaving" type="Control" parent="windows"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inside" type="Sprite2D" parent="windows/ExitWithoutSaving"]
+modulate = Color(0.270222, 0.270222, 0.270222, 1)
+scale = Vector2(6, 6)
+texture = ExtResource("52_yodqg")
+
+[node name="border" type="Sprite2D" parent="windows/ExitWithoutSaving"]
+scale = Vector2(6, 6)
+texture = ExtResource("51_857ds")
+
+[node name="title" type="Label" parent="windows/ExitWithoutSaving"]
+layout_mode = 0
+offset_left = -304.0
+offset_top = -116.0
+offset_right = 304.0
+offset_bottom = -58.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "EXIT WITHOUT SAVING?"
+horizontal_alignment = 1
+
+[node name="text" type="Label" parent="windows/ExitWithoutSaving"]
+layout_mode = 0
+offset_left = -224.0
+offset_top = -60.0
+offset_right = 216.0
+offset_bottom = 4.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "You haven't saved your project yet."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button01" type="Node2D" parent="windows/ExitWithoutSaving"]
+position = Vector2(-192, 52)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/ExitWithoutSaving/Button01"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="exit" type="Button" parent="windows/ExitWithoutSaving/Button01"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/ExitWithoutSaving/Button01"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button02" type="Node2D" parent="windows/ExitWithoutSaving"]
+position = Vector2(16, 52)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/ExitWithoutSaving/Button02"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="save_and_exit" type="Button" parent="windows/ExitWithoutSaving/Button02"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/ExitWithoutSaving/Button02"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "SAVE AND 
+EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button03" type="Node2D" parent="windows/ExitWithoutSaving"]
+position = Vector2(216, 52)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/ExitWithoutSaving/Button03"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="cancel" type="Button" parent="windows/ExitWithoutSaving/Button03"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/ExitWithoutSaving/Button03"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "CANCEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OpenWithoutSaving" type="Control" parent="windows"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="inside" type="Sprite2D" parent="windows/OpenWithoutSaving"]
+modulate = Color(0.270222, 0.270222, 0.270222, 1)
+scale = Vector2(6, 6)
+texture = ExtResource("52_yodqg")
+
+[node name="border" type="Sprite2D" parent="windows/OpenWithoutSaving"]
+scale = Vector2(6, 6)
+texture = ExtResource("51_857ds")
+
+[node name="title" type="Label" parent="windows/OpenWithoutSaving"]
+layout_mode = 0
+offset_left = -304.0
+offset_top = -116.0
+offset_right = 304.0
+offset_bottom = -58.0
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 40
+text = "OPEN PROJECT WITHOUT SAVING?"
+horizontal_alignment = 1
+
+[node name="text" type="Label" parent="windows/OpenWithoutSaving"]
+layout_mode = 0
+offset_left = -224.0
+offset_top = -60.0
+offset_right = 216.0
+offset_bottom = 4.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "You haven't saved your project yet."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button01" type="Node2D" parent="windows/OpenWithoutSaving"]
+position = Vector2(-192, 52)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/OpenWithoutSaving/Button01"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="open_new_project" type="Button" parent="windows/OpenWithoutSaving/Button01"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/OpenWithoutSaving/Button01"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -15
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "OPEN NEW
+PROJECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button02" type="Node2D" parent="windows/OpenWithoutSaving"]
+position = Vector2(16, 52)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/OpenWithoutSaving/Button02"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="save_and_open" type="Button" parent="windows/OpenWithoutSaving/Button02"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/OpenWithoutSaving/Button02"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "SAVE AND 
+OPEN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button03" type="Node2D" parent="windows/OpenWithoutSaving"]
+position = Vector2(216, 52)
+scale = Vector2(0.8, 0.8)
+
+[node name="button" type="Sprite2D" parent="windows/OpenWithoutSaving/Button03"]
+position = Vector2(-16, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("54_ha2xk")
+
+[node name="cancel" type="Button" parent="windows/OpenWithoutSaving/Button03"]
+offset_left = -120.0
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = 40.0
+focus_mode = 0
+flat = true
+
+[node name="text" type="Label" parent="windows/OpenWithoutSaving/Button03"]
+offset_left = -112.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = -16
+theme_override_fonts/font = ExtResource("25_b38la")
+theme_override_font_sizes/font_size = 32
+text = "CANCEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+visible = false
+position = Vector2(848, 664)
+
+[connection signal="pressed" from="interface/layers/layer00/button00" to="scripts/LocalCanvasManager/LayersManager" method="_on_button_00_pressed"]
+[connection signal="pressed" from="interface/layers/layer00/content/eye/eye_button00" to="scripts/LocalCanvasManager/LayersManager" method="_on_eye_button_00_pressed"]
+[connection signal="pressed" from="interface/layers/layer01/button01" to="scripts/LocalCanvasManager/LayersManager" method="_on_button_01_pressed"]
+[connection signal="pressed" from="interface/layers/layer01/content/eye/eye_button01" to="scripts/LocalCanvasManager/LayersManager" method="_on_eye_button_01_pressed"]
+[connection signal="pressed" from="interface/layers/layer02/button02" to="scripts/LocalCanvasManager/LayersManager" method="_on_button_02_pressed"]
+[connection signal="pressed" from="interface/layers/layer02/content/eye/eye_button02" to="scripts/LocalCanvasManager/LayersManager" method="_on_eye_button_02_pressed"]
+[connection signal="pressed" from="interface/layers/layer03/button03" to="scripts/LocalCanvasManager/LayersManager" method="_on_button_03_pressed"]
+[connection signal="pressed" from="interface/layers/layer03/content/eye/eye_button03" to="scripts/LocalCanvasManager/LayersManager" method="_on_eye_button_03_pressed"]
+[connection signal="pressed" from="interface/layers/onion/onion_button" to="scripts/LocalCanvasManager/LayersManager" method="_on_onion_button_pressed"]
+[connection signal="pressed" from="interface/colours/sliders/hsvcolor/hsvcolor_button" to="interface/colours/sliders" method="_on_hsvcolor_button_pressed"]
+[connection signal="text_changed" from="interface/colours/hex_color/input" to="interface/colours/hex_color" method="_on_input_text_changed"]
+[connection signal="pressed" from="interface/colours/hex_color/hexcolor/hexcolor_button" to="interface/colours/hex_color" method="_on_hexcolor_button_pressed"]
+[connection signal="pressed" from="interface/tools/tool01/tool01_button" to="interface/tools" method="_on_tool_01_button_pressed"]
+[connection signal="pressed" from="interface/tools/tool02/tool02_button" to="interface/tools" method="_on_tool_02_button_pressed"]
+[connection signal="pressed" from="interface/tools/tool03/tool03_button" to="interface/tools" method="_on_tool_03_button_pressed"]
+[connection signal="pressed" from="interface/tools/tool04/tool04_button" to="interface/tools" method="_on_tool_04_button_pressed"]
+[connection signal="text_changed" from="interface/tools_settings/brush_size/input" to="interface/colours/hex_color" method="_on_input_text_changed"]
+[connection signal="gui_input" from="border" to="border" method="_on_gui_input"]
+[connection signal="pressed" from="border/close/close" to="border" method="_on_close_pressed"]
+[connection signal="pressed" from="border/options/File/file/file_button" to="scripts/BorderOptionsManager" method="_on_file_button_pressed"]
+[connection signal="pressed" from="border/options/File/Box/Options/SaveImage/save_image_button" to="scripts/BorderOptionsManager" method="_on_save_image_button_pressed"]
+[connection signal="pressed" from="border/options/File/Box/Options/LoadProject/load_project_button" to="scripts/BorderOptionsManager" method="_on_load_project_button_pressed"]
+[connection signal="pressed" from="border/options/File/Box/Options/NewProject/new_project_button" to="scripts/BorderOptionsManager" method="_on_new_project_button_pressed"]
+[connection signal="pressed" from="border/options/Save/save/save_button" to="scripts/BorderOptionsManager" method="_on_save_button_pressed"]
+[connection signal="pressed" from="border/options/Save/Box/Options/SaveProject/save_project_button" to="scripts/SaveProject" method="_on_save_project_button_pressed"]
+[connection signal="pressed" from="border/options/Help/help/help_button" to="scripts/BorderOptionsManager" method="_on_help_button_pressed"]
+[connection signal="pressed" from="border/options/Help/Box/Options/About/about" to="scripts/BorderOptionsManager" method="_on_about_pressed"]
+[connection signal="pressed" from="border/options/Help/Box/Options/CheckUpdates/check_updates" to="scripts/BorderOptionsManager" method="_on_check_updates_pressed"]
+[connection signal="pressed" from="border/windows_options/colours" to="scripts/BorderOptionsManager" method="_on_colours_pressed"]
+[connection signal="pressed" from="border/windows_options/settings" to="scripts/BorderOptionsManager" method="_on_settings_pressed"]
+[connection signal="canceled" from="SaveImage" to="scripts/ScreenShotScript" method="_on_save_image_canceled"]
+[connection signal="file_selected" from="SaveImage" to="scripts/ScreenShotScript" method="_on_save_image_file_selected"]
+[connection signal="file_selected" from="SaveProject" to="scripts/SaveProject" method="_on_save_project_file_selected"]
+[connection signal="file_selected" from="LoadProject" to="scripts/LoadProject" method="_on_load_project_file_selected"]
+[connection signal="timeout" from="loading_time" to="." method="_on_loading_time_timeout"]
+[connection signal="pressed" from="about/content/exit_button/exit" to="about" method="_on_exit_pressed"]
+[connection signal="pressed" from="about/content/contact/email_link" to="about" method="_on_email_link_pressed"]
+[connection signal="pressed" from="about/content/updates/mundozubi_link" to="about" method="_on_mundozubi_link_pressed"]
+[connection signal="pressed" from="about/new_update_alert/update_button" to="about" method="_on_update_button_pressed"]
+[connection signal="request_completed" from="about/HTTPRequest" to="about" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="check_updates/content/exit_button/exit" to="check_updates" method="_on_exit_pressed"]
+[connection signal="pressed" from="check_updates/content/new_update_alert/download/download" to="check_updates" method="_on_download_pressed"]
+[connection signal="request_completed" from="check_updates/HTTPRequest" to="check_updates" method="_on_http_request_request_completed"]
+[connection signal="request_completed" from="check_updates/HTTPRequestImage" to="check_updates" method="_on_http_request_image_request_completed"]
+[connection signal="pressed" from="windows/ImageSavingOptions/Button01/accept_imgsav" to="scripts/ScreenShotScript" method="_on_accept_imgsav_pressed"]
+[connection signal="pressed" from="windows/ImageSavingOptions/Button03/cancel_imgsav" to="scripts/ScreenShotScript" method="_on_cancel_imgsav_pressed"]
+[connection signal="pressed" from="windows/ImageSavingOptions/RecallMyChoice/recall" to="scripts/ScreenShotScript" method="_on_recall_pressed"]
+[connection signal="pressed" from="windows/ExitWithoutSaving/Button01/exit" to="windows" method="_on_exit_pressed"]
+[connection signal="pressed" from="windows/ExitWithoutSaving/Button02/save_and_exit" to="windows" method="_on_save_and_exit_pressed"]
+[connection signal="pressed" from="windows/ExitWithoutSaving/Button03/cancel" to="windows" method="_on_cancel_pressed"]
+[connection signal="pressed" from="windows/OpenWithoutSaving/Button01/open_new_project" to="windows" method="_on_open_new_project_pressed"]
+[connection signal="pressed" from="windows/OpenWithoutSaving/Button02/save_and_open" to="windows" method="_on_save_and_open_pressed"]
+[connection signal="pressed" from="windows/OpenWithoutSaving/Button03/cancel" to="windows" method="_on_cancel_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr5t3bsgotmo0"]
+
+[ext_resource type="PackedScene" uid="uid://c8fkjf2oj5xww" path="res://pixel/pixel.tscn" id="1_487vo"]
+[ext_resource type="Script" path="res://pixel/test/4x_1_pixel_container.gd" id="1_mobqs"]
+
+[node name="4x1pixel_container" type="Node2D"]
+script = ExtResource("1_mobqs")
+
+[node name="pixel" parent="." instance=ExtResource("1_487vo")]
+
+[node name="pixel2" parent="." instance=ExtResource("1_487vo")]
+position = Vector2(16, 0)
+
+[node name="pixel3" parent="." instance=ExtResource("1_487vo")]
+position = Vector2(32, 0)
+
+[node name="pixel4" parent="." instance=ExtResource("1_487vo")]
+position = Vector2(48, 0)

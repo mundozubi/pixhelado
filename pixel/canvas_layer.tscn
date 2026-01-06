@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bownssvs64ddw"]
+
+[ext_resource type="PackedScene" uid="uid://c8fkjf2oj5xww" path="res://alpha/pixel/pixel.tscn" id="1_ii2gi"]
+
+[node name="CanvasLayer" type="Node2D"]
+
+[node name="Line01" type="Node2D" parent="."]
+
+[node name="pixel01" parent="Line01" instance=ExtResource("1_ii2gi")]
+
+[node name="pixel02" parent="Line01" instance=ExtResource("1_ii2gi")]
+position = Vector2(16, 0)
+
+[node name="pixel03" parent="Line01" instance=ExtResource("1_ii2gi")]
+position = Vector2(32, 0)
+
+[node name="pixel04" parent="Line01" instance=ExtResource("1_ii2gi")]
+position = Vector2(48, 0)
