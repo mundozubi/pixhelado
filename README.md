@@ -28,7 +28,7 @@ Please keep the code style consistent and describe your changes clearly (;
 ## How to run
 1. Download Godot version 4.3 stable --> https://godotengine.org/download/archive/4.3-stable/
 2. Launch Godot
-3.  
+3. Import this project by opening the file **project.godot**
 
 ## License
 
