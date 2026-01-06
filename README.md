@@ -1,5 +1,5 @@
 
-# PixHelado
+<img width="1080" height="350" alt="SUm4vK" src="https://github.com/user-attachments/assets/408c2b14-550c-4192-8431-1a868da2111c" />
 
 PixHelado is a lightweight pixel-art drawing tool built with Godot Engine 4.3
 It focuses on simplicity, speed, and a clean workflow for creating small sprites, icons, and pixel-based assets.
