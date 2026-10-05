@@ -1,0 +1,33 @@
+GDRE Tools v2.7.0-beta.2
+Windows 10.0.26200, NVIDIA GeForce RTX 3050, vulkan
+Opening file: C:/Users/Usuario/Desktop/versiones proyectos desarrollo/pixhelado-beta0.3.1-win64.exe
+Loaded 120 imported files
+Detected Engine Version: 4.3.0
+Detected Bytecode Revision: 4.3.0-stable (77af6ca)
+Verified 245 files, no errors detected!
+Extracted 245 files, no errors detected!
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     39
+Scripts not decompiled:                 0
+Imported resources for export session:  120
+Successfully converted:                 120
+Lossy:                                  1
+Rewrote metadata:                       75
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.3.0 to edit the project.
+
+*******************************************************************************
+
