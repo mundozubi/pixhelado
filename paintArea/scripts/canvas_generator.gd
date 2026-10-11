@@ -1,10 +1,10 @@
 extends Node
 
-@export var layers: int = 0
-@export var canvasx: int = 32
-@export var canvasy: int = 32
+@export var layers:int = 0
+@export var canvasx:int = 32
+@export var canvasy:int = 32
 
-var generated_layers: int = 0
+var generated_layers:int = 0
 
 @onready var local_cmanager = $".."
 
@@ -31,67 +31,67 @@ var img_l04 = Image.create(canvasx, canvasy, false, Image.FORMAT_RGBA8)
 var tex_l04 = ImageTexture.create_from_image(img_l04)
 
 
-func _ready() -> void :
+func _ready() -> void:
 	CanvasManager.data["canvas"]["layers_cant"] = 0
-
+	
 	CanvasManager.data["canvas"]["canvasx"] = ""
 	CanvasManager.data["canvas"]["canvasy"] = ""
 	CanvasManager.data["canvas"]["canvasx"] = canvasx
 	CanvasManager.data["canvas"]["canvasy"] = canvasy
-
+	
 	canvas_prev_l01.texture = tex_l01
 	canvas_prev_l02.texture = tex_l02
 	canvas_prev_l03.texture = tex_l03
 	canvas_prev_l04.texture = tex_l04
-
+	
 	canvas_image_l01.texture = tex_l01
 	canvas_image_l02.texture = tex_l02
 	canvas_image_l03.texture = tex_l03
 	canvas_image_l04.texture = tex_l04
-
+	
 	generate_canvas()
 
 func generate_canvas():
 	img_l01.fill(Color(1, 1, 1, 0))
 	tex_l01.update(img_l01)
-
+	
 	local_cmanager.add_new_canvas(img_l01, tex_l01, 1, canvas_image_l01, 19)
-
-
+	
+	
 	img_l02.fill(Color(1, 1, 1, 0))
 	tex_l02.update(img_l02)
-
+	
 	local_cmanager.add_new_canvas(img_l02, tex_l02, 2, canvas_image_l02, 19)
-
-
+	
+	
 	img_l03.fill(Color(1, 1, 1, 0))
 	tex_l03.update(img_l03)
-
+	
 	local_cmanager.add_new_canvas(img_l03, tex_l03, 3, canvas_image_l03, 19)
-
-
+	
+	
 	img_l04.fill(Color(1, 1, 1, 0))
 	tex_l04.update(img_l04)
-
+	
 	local_cmanager.add_new_canvas(img_l04, tex_l04, 4, canvas_image_l04, 19)
 
 func rebuild_canvas_from_loaded_data():
-	var canvasx = CanvasManager.data["canvas"]["canvasx"]
-	var canvasy = CanvasManager.data["canvas"]["canvasy"]
-	var layers = CanvasManager.data["canvas"]["layers_cant"]
+	canvasx = CanvasManager.data["canvas"]["canvasx"]
+	canvasy = CanvasManager.data["canvas"]["canvasy"]
+	layers = CanvasManager.data["canvas"]["layers_cant"]
 
 	local_cmanager.local_data["canvas"] = {}
 
-	for layer in range(1, layers + 1):
-		var layer_case = "layer_" + str(layer)
-
-
+	for layer in range(1, layers+1):
+		var layer_case = "layer_"+str(layer)
+		
+		# Crear imagen nueva
 		var img = Image.create(canvasx, canvasy, false, Image.FORMAT_RGBA8)
-		img.fill(Color(0, 0, 0, 0))
-
-
+		img.fill(Color(0,0,0,0))
+		
+		# Crear textura nueva
 		var tex = ImageTexture.create_from_image(img)
-
+		
 		var sprite
 		var prev
 		match layer:
@@ -107,15 +107,15 @@ func rebuild_canvas_from_loaded_data():
 			4:
 				sprite = canvas_image_l04
 				prev = canvas_prev_l04
-
+			
 		sprite.texture = tex
 		prev.texture = tex
-
-
+		
+		# Registrar en local_data
 		local_cmanager.local_data["canvas"][layer_case] = {
-			"image": img, 
-			"texture": tex, 
-			"sprite": sprite, 
+			"image": img,
+			"texture": tex,
+			"sprite": sprite,
 			"visible": true
 		}
 

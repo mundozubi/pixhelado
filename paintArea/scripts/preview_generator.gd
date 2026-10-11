@@ -1,12 +1,12 @@
 extends Node
 
 
-func _process(delta):
+func _process(_delta):
 	var max_size = $"../../../../interface/layer_previews/prev_00".size
 	var tex_size = $"../../../../interface/layer_previews/prev_00/layer00_prev".texture.get_size()
 
 	var scale_factor = min(
-		max_size.x / tex_size.x, 
+		max_size.x / tex_size.x,
 		max_size.y / tex_size.y
 	)
 

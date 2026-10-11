@@ -4,7 +4,7 @@ extends Node2D
 
 var color
 
-func _process(delta: float) -> void :
+func _process(delta: float) -> void:
 	var sprite = $gradient
 	var texture = sprite.texture
 	if texture == null:
@@ -20,7 +20,7 @@ func _process(delta: float) -> void :
 	var tex_size = texture.get_size()
 	var scale = sprite.scale
 
-
+	# Si el sprite está centrado, ajustamos el origen
 	if sprite.centered:
 		local_pos += tex_size * scale / 2
 
@@ -29,8 +29,8 @@ func _process(delta: float) -> void :
 
 	if pixel_x >= 0 and pixel_y >= 0 and pixel_x < tex_size.x and pixel_y < tex_size.y:
 		color = image.get_pixel(pixel_x, pixel_y)
+		
 
 
-
-func _on_colourgradient_button_pressed() -> void :
+func _on_colourgradient_button_pressed() -> void:
 	MouseSupervisor.selected_color = color

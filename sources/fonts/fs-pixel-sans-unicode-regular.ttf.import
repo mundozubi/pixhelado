@@ -22,6 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=0
+subpixel_positioning=0
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

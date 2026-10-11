@@ -1,10 +1,10 @@
 extends Node
 
-var saved_action_numb: int = 0
+var saved_action_numb:int = 0
 
-var windows: Control = null
-var exit_without: Control = null
-var open_without: Control = null
+var windows:Control = null
+var exit_without:Control = null
+var open_without:Control = null
 
 signal decision(result)
 
@@ -16,12 +16,12 @@ func check_unsaved_changes(window_type):
 				open_exit_without_saving_window()
 			"open_without":
 				open_open_without_saving_window()
-
+				
 		var result = await decision
 		return result
 	else:
 		return "nothing_to_save"
-
+		
 
 func open_exit_without_saving_window():
 	windows.visible = true

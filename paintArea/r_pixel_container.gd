@@ -1,6 +1,6 @@
 extends Node2D
 
-var copy: bool = false
+var copy:bool = false
 
 func update_all_colours():
 	var pixels = get_children()

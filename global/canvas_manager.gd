@@ -1,27 +1,37 @@
 extends Node
 
-var info: Dictionary = {
-	"version" = "0.3.1", 
-	"program" = "pixhelado", 
+var info:Dictionary = {
+	"version" = "0.3.1",
+	"program" = "pixhelado",
 	"company" = "mundozubi"
 }
 
-var canvas: Dictionary = {
+var canvas:Dictionary = {
 }
 
-var data: Dictionary = {
+var data:Dictionary = {
 	"canvas" = {
-		"layers_cant" = 0, 
+		"layers_cant" = 0,
 		"undo_numb" = 1
 	}
 }
 
-var enable_painting: bool = true
+var enable_painting:bool = true
 
-var canvasx: int
-var canvasy: int
+var canvasx:int
+var canvasy:int
 
-func _ready() -> void :
+func _ready() -> void:
 	pass
 
-"\nEstructura base de datos 'data' de CanvasManager\n\nDATA\n-canvas\n--layer_0\n--layer_1\n--etc\n\n\n"
+"""
+Estructura base de datos 'data' de CanvasManager
+
+DATA
+-canvas
+--layer_0
+--layer_1
+--etc
+
+
+"""

@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="PixHelado (beta - v0.3.1)"
-config/version="0.3.1.0"
+config/name="PixHelado (beta - v0.3.2)"
+config/version="0.3.2.0"
 run/main_scene="res://paintArea/paint_area.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
